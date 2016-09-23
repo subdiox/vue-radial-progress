@@ -43,7 +43,8 @@
       <radial-progress-bar :diameter="200"
                            :total-steps="totalSteps"
                            :completed-steps="completedSteps">
-
+        <p>Total steps: {{ totalSteps }}</p>
+        <p>Completed steps: {{ completedSteps }}</p>
       </radial-progress-bar>
       <div class="controls">
         <button v-if="completedSteps > 0"
