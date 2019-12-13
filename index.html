@@ -94,10 +94,12 @@
                             :completed-steps="completedSteps"
                             :animate-speed="animateSpeed"
                             :stroke-width="strokeWidth"
+                            :stroke-linecap="strokeLinecap"
                             :start-color="startColor"
                             :stop-color="stopColor"
                             :inner-stroke-color="innerStrokeColor"
-                            :timing-func="timingFunc">
+                            :timing-func="timingFunc"
+                            :is-clockwise="isClockwise">
           <p>Total steps: {{ totalSteps }}</p>
           <p>Completed steps: {{ completedSteps }}</p>
         </radial-progress-bar>
@@ -190,13 +192,15 @@
           return {
             completedSteps: 1,
             totalSteps: 6,
-            animateSpeed: 1000,
+            animateSpeed: 100,
             diameter: 300,
             strokeWidth: 10,
+            strokeLinecap: 'round',
             startColor: '#bbff42',
             stopColor: '#429321',
             innerStrokeColor: '#323232',
-            timingFunc: 'linear'
+            timingFunc: 'linear',
+            isClockwise: true
           }
         },
         methods: {
